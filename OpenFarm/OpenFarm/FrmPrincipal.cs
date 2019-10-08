@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace OpenFarm
 {
-    public partial class FrmPrincipal : MaterialSkin.Controls.MaterialForm
+    public partial class FrmPrincipal : Form //MaterialSkin.Controls.MaterialForm
     {
         public FrmPrincipal()
         {

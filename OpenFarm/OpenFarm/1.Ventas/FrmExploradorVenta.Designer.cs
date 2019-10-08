@@ -71,7 +71,7 @@
             this.Controls.Add(this.materialCheckBox1);
             this.Controls.Add(this.materialFlatButton1);
             this.Name = "FrmExploradorVenta";
-            this.Text = "FrmEploradorVenta";
+            this.Text = "Eplorador Venta";
             this.ResumeLayout(false);
             this.PerformLayout();
 

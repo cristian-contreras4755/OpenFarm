@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OpenFarm._1.Ventas
 {
-    public partial class FrmProductoCrea : MaterialSkin.Controls.MaterialForm
+    public partial class FrmUnidadMedida : Form
     {
-        public FrmProductoCrea()
+        public FrmUnidadMedida()
         {
             InitializeComponent();
         }

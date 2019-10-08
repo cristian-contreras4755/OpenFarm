@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace OpenFarm._1.Ventas
 {
-    public partial class FrmProductoMant : Form
+    public partial class FrmProductoMant : MaterialSkin.Controls.MaterialForm
     {
         public FrmProductoMant()
         {

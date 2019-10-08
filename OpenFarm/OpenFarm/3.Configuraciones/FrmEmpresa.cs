@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OpenFarm._1.Ventas
+namespace OpenFarm._5.Configuraciones
 {
-    public partial class FrmProductoCrea : MaterialSkin.Controls.MaterialForm
+    public partial class FrmEmpresa : MaterialSkin.Controls.MaterialForm
     {
-        public FrmProductoCrea()
+        public FrmEmpresa()
         {
             InitializeComponent();
         }
+
+     
     }
 }
