@@ -36,24 +36,6 @@
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.2.0.30\lib\net461\Dapper.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.BonusSkins.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a" />
-    <Reference Include="DevExpress.Data.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.ExpressApp.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.ExpressApp.Win.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Persistent.Base.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Xpo.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraNavBar.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraRichEdit.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraVerticalGrid.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
@@ -72,42 +54,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1.Ventas\FrmExploradorVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="1.Ventas\FrmExploradorVenta.Designer.cs">
-      <DependentUpon>FrmExploradorVenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="1.Ventas\FrmProductoCrea.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="1.Ventas\FrmProductoCrea.Designer.cs">
-      <DependentUpon>FrmProductoCrea.cs</DependentUpon>
-    </Compile>
-    <Compile Include="1.Ventas\FrmProductoMant.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="1.Ventas\FrmProductoMant.Designer.cs">
-      <DependentUpon>FrmProductoMant.cs</DependentUpon>
-    </Compile>
-    <Compile Include="1.Ventas\FrmUnidadMedida.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="1.Ventas\FrmUnidadMedida.Designer.cs">
-      <DependentUpon>FrmUnidadMedida.cs</DependentUpon>
-    </Compile>
-    <Compile Include="1.Ventas\FrmVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="1.Ventas\FrmVenta.Designer.cs">
-      <DependentUpon>FrmVenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="3.Configuraciones\FrmEmpresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="3.Configuraciones\FrmEmpresa.Designer.cs">
-      <DependentUpon>FrmEmpresa.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +66,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimiento\FrmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,18 +79,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="1.Ventas\FrmExploradorVenta.resx">
-      <DependentUpon>FrmExploradorVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="1.Ventas\FrmProductoCrea.resx">
-      <DependentUpon>FrmProductoCrea.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="1.Ventas\FrmProductoMant.resx">
-      <DependentUpon>FrmProductoMant.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="3.Configuraciones\FrmEmpresa.resx">
-      <DependentUpon>FrmEmpresa.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Ventas\FrmVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\FrmVenta.Designer.cs">
+      <DependentUpon>FrmVenta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +105,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Ventas\FrmVenta.resx">
+      <DependentUpon>FrmVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -174,9 +123,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="2.inventario\" />
-    <Folder Include="4.Reportes\" />
-    <Folder Include="5.Manteniento\" />
+    <Folder Include="Inventario\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

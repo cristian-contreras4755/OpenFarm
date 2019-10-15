@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OpenFarm._1.Ventas
+namespace OpenFarm.Mantenimiento
 {
-    public partial class FrmProductoCrea : MaterialSkin.Controls.MaterialForm
+    public partial class FrmCategoria : Form
     {
-        public FrmProductoCrea()
+        public FrmCategoria()
         {
             InitializeComponent();
         }

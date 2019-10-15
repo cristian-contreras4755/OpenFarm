@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OpenFarm._1.Ventas
+namespace OpenFarm.Ventas
 {
-    public partial class FrmUnidadMedida : Form
+    public partial class FrmVenta : Form
     {
-        public FrmUnidadMedida()
+        public FrmVenta()
         {
             InitializeComponent();
         }

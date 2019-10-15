@@ -1,6 +1,6 @@
-﻿namespace OpenFarm._1.Ventas
+﻿namespace OpenFarm.Ventas
 {
-    partial class FrmUnidadMedida
+    partial class FrmVenta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FrmVenta
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmUnidadMedida";
+            this.ClientSize = new System.Drawing.Size(1196, 635);
+            this.Name = "FrmVenta";
+            this.Text = "FrmVenta";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
