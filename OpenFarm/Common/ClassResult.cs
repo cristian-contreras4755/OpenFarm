@@ -15,7 +15,7 @@ namespace Common
         public string Detalle { get; set; }
         public string Codigo { get; set; }
         public int Id { get; set; }
-        public  DataTable  Dt1 { get; set; }
+        public DataTable Dt1 { get; set; }
         public DataTable Dt2 { get; set; }
         public DataTable Dt3 { get; set; }
         //List<DtoB> list;

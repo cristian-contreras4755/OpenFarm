@@ -31,6 +31,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.CodedUIExtension.v17.1">
+      <HintPath>C:\Program Files (x86)\DevExpress 17.1\Components\Tools\Windows Forms\DevExpress.CodedUIExtension.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodedUIExtension.VS11.v17.1">
+      <HintPath>C:\Program Files (x86)\DevExpress 17.1\Components\Tools\Windows Forms\DevExpress.CodedUIExtension.VS11.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodedUIExtension.VS12.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 17.1\Components\Tools\Windows Forms\DevExpress.CodedUIExtension.VS12.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodedUIExtension.VS14.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 17.1\Components\Tools\Windows Forms\DevExpress.CodedUIExtension.VS14.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodedUIExtension.VS15.v17.1">
+      <HintPath>C:\Program Files (x86)\DevExpress 17.1\Components\Tools\Windows Forms\DevExpress.CodedUIExtension.VS15.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="SkinEditor">
+      <HintPath>C:\Program Files (x86)\DevExpress 17.1\Components\Tools\Windows Forms\SkinEditor.exe</HintPath>
+    </Reference>
+    <Reference Include="SkinEditor.v2">
+      <HintPath>C:\Program Files (x86)\DevExpress 17.1\Components\Tools\Windows Forms\SkinEditor.v2.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaModel.cs" />
     <Compile Include="EmpresaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
