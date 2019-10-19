@@ -3,6 +3,7 @@ using Model;
 using Repository;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,10 +14,16 @@ namespace Bussines
     {
 
 
-        public ClassResult Categoria_CreaMdf(CategoriaModel categoriaModel)
+        public ClassResult Categoria_Crea(CategoriaModel categoriaModel)
         {
             CategoriaRepository _ventaRepository = new CategoriaRepository();
-            return _ventaRepository.Categoria_CreaMdf(categoriaModel);
+            return _ventaRepository.Categoria_Crea(categoriaModel);
+        }
+
+        public ClassResult Categoria_Mdf(CategoriaModel categoriaModel)
+        {
+            CategoriaRepository _ventaRepository = new CategoriaRepository();
+            return _ventaRepository.Categoria_Mdf(categoriaModel);
         }
 
         public ClassResult Categoria_ConsUn(CategoriaModel categoriaModel)
@@ -29,6 +36,13 @@ namespace Bussines
         {
             CategoriaRepository _ventaRepository = new CategoriaRepository();
             return _ventaRepository.Categoria_Cons();
+        }
+
+
+        public  DataTable BuscarCategoria(CategoriaModel categoriaModel)
+        {
+            CategoriaRepository _ventaRepository = new CategoriaRepository();
+            return _ventaRepository.FiltrarCategoria(categoriaModel);
         }
 
     }

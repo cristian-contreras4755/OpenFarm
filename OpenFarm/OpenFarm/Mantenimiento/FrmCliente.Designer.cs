@@ -1,6 +1,6 @@
-﻿namespace OpenFarm
+﻿namespace OpenFarm.Mantenimiento
 {
-    partial class FrmPrincipal
+    partial class FrmCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // FrmPrincipal
+            // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1444, 660);
-            this.Name = "FrmPrincipal";
-            this.Text = "FrmPrincipal";
+            this.ClientSize = new System.Drawing.Size(1092, 576);
+            this.Name = "FrmCliente";
+            this.Text = "FrmCliente";
+            this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.ResumeLayout(false);
 
         }
