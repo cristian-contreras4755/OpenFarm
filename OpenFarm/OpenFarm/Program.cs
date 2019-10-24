@@ -1,5 +1,6 @@
 ﻿
 using OpenFarm.Mantenimiento;
+using OpenFarm.Ventas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace OpenFarm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Categoria());
+            Application.Run(new FrmMarca());
         }
     }
 }

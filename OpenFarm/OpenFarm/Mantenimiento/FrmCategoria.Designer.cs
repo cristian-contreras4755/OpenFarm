@@ -43,6 +43,7 @@
             this.btn_buscar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_guardar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btn_cancelar = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.DRG_Categoria)).BeginInit();
             this.contextMenucrud.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -132,8 +133,9 @@
             this.editarToolStripMenuItem,
             this.eliminarToolStripMenuItem});
             this.contextMenucrud.Name = "contextMenucrud";
-            this.contextMenucrud.Size = new System.Drawing.Size(181, 70);
+            this.contextMenucrud.Size = new System.Drawing.Size(118, 48);
             this.contextMenucrud.Text = "Opciones";
+            this.contextMenucrud.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenucrud_Opening);
             // 
             // editarToolStripMenuItem
             // 
@@ -169,10 +171,12 @@
             this.btn_buscar.TabIndex = 11;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btn_cancelar);
             this.panel1.Controls.Add(this.btn_guardar);
             this.panel1.Location = new System.Drawing.Point(7, 76);
             this.panel1.Name = "panel1";
@@ -182,15 +186,28 @@
             // btn_guardar
             // 
             this.btn_guardar.Depth = 0;
-            this.btn_guardar.Location = new System.Drawing.Point(145, 132);
+            this.btn_guardar.Location = new System.Drawing.Point(113, 133);
             this.btn_guardar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Primary = true;
-            this.btn_guardar.Size = new System.Drawing.Size(91, 32);
+            this.btn_guardar.Size = new System.Drawing.Size(79, 27);
             this.btn_guardar.TabIndex = 12;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.Depth = 0;
+            this.btn_cancelar.Location = new System.Drawing.Point(198, 133);
+            this.btn_cancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Primary = true;
+            this.btn_cancelar.Size = new System.Drawing.Size(75, 27);
+            this.btn_cancelar.TabIndex = 13;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
             // 
             // Categoria
             // 
@@ -208,7 +225,7 @@
             this.HelpButton = true;
             this.Name = "Categoria";
             this.Sizable = false;
-            this.Text = "FrmCategoria";
+            this.Text = "Categoria";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.FrmCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DRG_Categoria)).EndInit();
@@ -232,5 +249,6 @@
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialRaisedButton btn_guardar;
+        private MaterialSkin.Controls.MaterialRaisedButton btn_cancelar;
     }
 }

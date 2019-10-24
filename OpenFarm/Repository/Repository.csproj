@@ -47,6 +47,7 @@
     <Compile Include="CategoriaRepository.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="EmpresaRepository.cs" />
+    <Compile Include="MarcaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -18,7 +18,5 @@ namespace Common
         public DataTable Dt1 { get; set; }
         public DataTable Dt2 { get; set; }
         public DataTable Dt3 { get; set; }
-        //List<DtoB> list;
-        //DtoB entidad;
     }
 }

@@ -26,6 +26,14 @@ namespace Bussines
             return _ventaRepository.Categoria_Mdf(categoriaModel);
         }
 
+
+        public ClassResult Categoria_Elim(CategoriaModel categoriaModel)
+        {
+            CategoriaRepository _ventaRepository = new CategoriaRepository();
+            return _ventaRepository.Categoria_Elim(categoriaModel);
+        }
+
+
         public ClassResult Categoria_ConsUn(CategoriaModel categoriaModel)
         {
             CategoriaRepository _ventaRepository = new CategoriaRepository();

@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class CategoriaRepository
+   public class MarcaRepository
     {
 
-        public ClassResult Categoria_Crea(CategoriaModel categoriaModel)
+        public ClassResult Marca_Crea(MarcaModel MarcaModel)
         {
             ClassResult cr = new ClassResult();
             Conexion _conexion = new Conexion();
@@ -23,10 +23,11 @@ namespace Repository
                 using (IDbConnection conexion = new SqlConnection(_conexion.Getconnection()))
                 {
                     var Parameters = new DynamicParameters();
-                    Parameters.Add("@Nombre", categoriaModel.Nombre, dbType: DbType.String, direction: ParameterDirection.Input, size: 50);
-                    Parameters.Add("@Descripcion", categoriaModel.Descripcion, dbType: DbType.String, direction: ParameterDirection.Input, size:250);
+                    Parameters.Add("@Nombre", MarcaModel.Nombre, dbType: DbType.String, direction: ParameterDirection.Input, size: 50);
+                    Parameters.Add("@Descrip", MarcaModel.Descrip, dbType: DbType.String, direction: ParameterDirection.Input, size: 250);
+                    Parameters.Add("@NCorto", MarcaModel.NCorto, dbType: DbType.String, direction: ParameterDirection.Input, size: 5);
                     Parameters.Add("@msj", dbType: DbType.String, direction: ParameterDirection.Output, size: 200);
-                    var Result = conexion.ExecuteScalar("sp_venta_categoria_Crea", param: Parameters, commandType: CommandType.StoredProcedure);
+                    var Result = conexion.ExecuteScalar("sp_venta_Marca_Crea", param: Parameters, commandType: CommandType.StoredProcedure);
                     string PCmsj = Parameters.Get<string>("@msj");
                     if (String.IsNullOrEmpty(PCmsj))
                     {
@@ -37,7 +38,7 @@ namespace Repository
                     {
                         cr.HuboError = true;
                         cr.ErrorMsj = PCmsj;
-                        cr.LugarError = "Categoria_Crea()";
+                        cr.LugarError = "Marca_Crea()";
                         return cr;
                     }
                 }
@@ -47,12 +48,12 @@ namespace Repository
             {
                 cr.HuboError = true;
                 cr.ErrorMsj = ex.Message;
-                cr.LugarError = "Categoria_CreaMdf()";
+                cr.LugarError = "Marca_Crea()";
                 return cr;
             }
         }
 
-        public ClassResult Categoria_Elim(CategoriaModel categoriaModel)
+        public ClassResult Marca_Elim(MarcaModel MarcaModel)
         {
             ClassResult cr = new ClassResult();
             Conexion _conexion = new Conexion();
@@ -61,9 +62,9 @@ namespace Repository
                 using (IDbConnection conexion = new SqlConnection(_conexion.Getconnection()))
                 {
                     var Parameters = new DynamicParameters();
-                    Parameters.Add("@Id_Categoria", categoriaModel.Id_Categoria, dbType: DbType.Int32, direction: ParameterDirection.Input);
+                    Parameters.Add("@Id_Mca", MarcaModel.Id_Mca, dbType: DbType.Int32, direction: ParameterDirection.Input);
                     Parameters.Add("@msj", dbType: DbType.String, direction: ParameterDirection.Output, size: 100);
-                    var Result = conexion.ExecuteScalar("sp_venta_categoria_Elim", param: Parameters, commandType: CommandType.StoredProcedure);
+                    var Result = conexion.ExecuteScalar("sp_venta_Marca_Elim", param: Parameters, commandType: CommandType.StoredProcedure);
                     string PCmsj = Parameters.Get<string>("@msj");
                     if (String.IsNullOrEmpty(PCmsj))
                     {
@@ -74,7 +75,7 @@ namespace Repository
                     {
                         cr.HuboError = true;
                         cr.ErrorMsj = PCmsj;
-                        cr.LugarError = "Categoria_Elim()";
+                        cr.LugarError = "Marca_Elim()";
                         return cr;
                     }
                 }
@@ -84,12 +85,13 @@ namespace Repository
             {
                 cr.HuboError = true;
                 cr.ErrorMsj = ex.Message;
-                cr.LugarError = "Categoria_CreaMdf()";
+                cr.LugarError = "Marca_CreaMdf()";
                 return cr;
             }
         }
 
-        public ClassResult Categoria_Mdf(CategoriaModel categoriaModel)
+
+        public ClassResult Marca_Mdf(MarcaModel MarcaModel)
         {
             ClassResult cr = new ClassResult();
             Conexion _conexion = new Conexion();
@@ -98,11 +100,12 @@ namespace Repository
                 using (IDbConnection conexion = new SqlConnection(_conexion.Getconnection()))
                 {
                     var Parameters = new DynamicParameters();
-                    Parameters.Add("@Id_Categoria", categoriaModel.Id_Categoria, dbType: DbType.Int32, direction: ParameterDirection.Input);
-                    Parameters.Add("@Nombre", categoriaModel.Nombre, dbType: DbType.String, direction: ParameterDirection.Input, size: 50);
-                    Parameters.Add("@Descripcion", categoriaModel.Descripcion, dbType: DbType.String, direction: ParameterDirection.Input, size: 250);
+                    Parameters.Add("@Id_Mca", MarcaModel.Id_Mca, dbType: DbType.Int32, direction: ParameterDirection.Input);
+                    Parameters.Add("@Nombre", MarcaModel.Nombre, dbType: DbType.String, direction: ParameterDirection.Input, size: 50);
+                    Parameters.Add("@Descrip", MarcaModel.Descrip, dbType: DbType.String, direction: ParameterDirection.Input, size: 250);
+                    Parameters.Add("@NCorto", MarcaModel.NCorto, dbType: DbType.String, direction: ParameterDirection.Input, size: 5);
                     Parameters.Add("@msj", dbType: DbType.String, direction: ParameterDirection.Output, size: 100);
-                    var Result = conexion.ExecuteScalar("sp_venta_categoria_Mdf", param: Parameters, commandType: CommandType.StoredProcedure);
+                    var Result = conexion.ExecuteScalar("sp_venta_Marca_Mdf", param: Parameters, commandType: CommandType.StoredProcedure);
                     string PCmsj = Parameters.Get<string>("@msj");
                     if (String.IsNullOrEmpty(PCmsj))
                     {
@@ -113,7 +116,7 @@ namespace Repository
                     {
                         cr.HuboError = true;
                         cr.ErrorMsj = PCmsj;
-                        cr.LugarError = "Categoria_Crea()";
+                        cr.LugarError = "Marca_Mdf()";
                         return cr;
                     }
                 }
@@ -123,48 +126,47 @@ namespace Repository
             {
                 cr.HuboError = true;
                 cr.ErrorMsj = ex.Message;
-                cr.LugarError = "Categoria_CreaMdf()";
+                cr.LugarError = "Marca_Mdf()";
                 return cr;
             }
         }
 
-        public ClassResult Categoria_ConsUn(CategoriaModel categoriaModel)
+        public ClassResult Marca_ConsUn(MarcaModel MarcaModel)
         {
             ClassResult cr = new ClassResult();
             Conexion _conexion = new Conexion();
             try
             {
-                DataTable DtResultado = new DataTable("Categorias");
+                DataTable DtResultado = new DataTable("Marcas");
                 using (SqlConnection connection = new SqlConnection(_conexion.Getconnection()))
                 {
                     connection.Open();
 
                     SqlCommand SqlCmd = new SqlCommand();
 
-                    SqlParameter ParId_Categoria = new SqlParameter();
-                    ParId_Categoria.ParameterName = "@Id_Categoria";
-                    ParId_Categoria.SqlDbType = SqlDbType.Int;
-                    ParId_Categoria.Value = categoriaModel.Id_Categoria;
-                    SqlCmd.Parameters.Add(ParId_Categoria);
+                    SqlParameter ParId_Marca = new SqlParameter();
+                    ParId_Marca.ParameterName = "@Id_Mca";
+                    ParId_Marca.SqlDbType = SqlDbType.Int;
+                    ParId_Marca.Value = MarcaModel.Id_Mca;
+                    SqlCmd.Parameters.Add(ParId_Marca);
 
                     SqlParameter Parmsg = new SqlParameter();
                     Parmsg.ParameterName = "@msj";
                     Parmsg.SqlDbType = SqlDbType.VarChar;
                     Parmsg.Size = 100;
-                    Parmsg.Direction= ParameterDirection.Output;
+                    Parmsg.Direction = ParameterDirection.Output;
                     SqlCmd.Parameters.Add(Parmsg);
 
 
 
                     SqlCmd.Connection = connection;
-                    SqlCmd.CommandText = "sp_venta_categoria_consUn";
+                    SqlCmd.CommandText = "sp_venta_marca_consUn";
                     SqlCmd.CommandType = CommandType.StoredProcedure;
                     SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
 
                     SqlCmd.ExecuteNonQuery();
                     connection.Close();
-                    string PCmsj =SqlCmd.Parameters["@msj"].Value.ToString();
-
+                    string PCmsj = SqlCmd.Parameters["@msj"].Value.ToString();
 
                     if (String.IsNullOrEmpty(PCmsj))
                     {
@@ -177,7 +179,7 @@ namespace Repository
                     {
                         cr.HuboError = true;
                         cr.ErrorMsj = PCmsj;
-                        cr.LugarError = "Categoria_ConsUn()";
+                        cr.LugarError = "Marca_ConsUn()";
                         return cr;
                     }
                 }
@@ -186,24 +188,24 @@ namespace Repository
             {
                 cr.HuboError = true;
                 cr.ErrorMsj = ex.Message;
-                cr.LugarError = "Categoria_ConsUn()";
+                cr.LugarError = "Marca_ConsUn()";
                 return cr;
             }
         }
 
-        public ClassResult Categoria_Cons()
+        public ClassResult Marca_Cons()
         {
             ClassResult cr = new ClassResult();
             Conexion _conexion = new Conexion();
             try
             {
-                DataTable DtResultado = new DataTable("Categoria");
+                DataTable DtResultado = new DataTable("Marca");
                 using (SqlConnection connection = new SqlConnection(_conexion.Getconnection()))
                 {
 
                     SqlCommand SqlCmd = new SqlCommand();
                     SqlCmd.Connection = connection;
-                    SqlCmd.CommandText = "sp_venta_categoria_cons";
+                    SqlCmd.CommandText = "sp_venta_marca_cons";
                     SqlCmd.CommandType = CommandType.StoredProcedure;
 
                     SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
@@ -217,12 +219,12 @@ namespace Repository
             {
                 cr.HuboError = true;
                 cr.ErrorMsj = ex.Message;
-                cr.LugarError = "Categoria_Cons()";
+                cr.LugarError = "Marca_Cons()";
                 return cr;
             }
         }
 
-        public DataTable FiltrarCategoria(CategoriaModel categoriaModel)
+        public DataTable FiltrarMarca(MarcaModel MarcaModel)
         {
             DataTable DtResultado = new DataTable("cat");
             Conexion _conexion = new Conexion();
@@ -232,21 +234,18 @@ namespace Repository
                 {
                     SqlCommand SqlCmd = new SqlCommand();
                     SqlCmd.Connection = connection;
-                    SqlCmd.CommandText = "sp_venta_categoria_filter";
+                    SqlCmd.CommandText = "sp_venta_marca_filter";
                     SqlCmd.CommandType = CommandType.StoredProcedure;
 
                     SqlParameter ParTextoaBuscar = new SqlParameter();
                     ParTextoaBuscar.ParameterName = "@Nombre";
                     ParTextoaBuscar.SqlDbType = SqlDbType.VarChar;
                     ParTextoaBuscar.Size = 50;
-                    ParTextoaBuscar.Value = categoriaModel.Nombre;
+                    ParTextoaBuscar.Value = MarcaModel.Nombre;
                     SqlCmd.Parameters.Add(ParTextoaBuscar);
-
-
 
                     SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                     SqlDat.Fill(DtResultado);
-
                 }
             }
             catch (Exception ex)
@@ -255,6 +254,7 @@ namespace Repository
             }
             return DtResultado;
         }
+
 
     }
 }
