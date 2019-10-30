@@ -100,7 +100,7 @@ namespace OpenFarm.Mantenimiento
 
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            MarcaMarca();
+            BuscarMarca();
 
         }
 
@@ -140,7 +140,7 @@ namespace OpenFarm.Mantenimiento
 
 
 
-        public void MarcaMarca()
+        public void BuscarMarca()
         {
             MarcaBusiness ctr = new MarcaBusiness();
             MarcaModel model = new MarcaModel();
@@ -162,7 +162,7 @@ namespace OpenFarm.Mantenimiento
 
         private void Txt_buscar_KeyUp(object sender, KeyEventArgs e)
         {
-            MarcaMarca();
+            BuscarMarca();
         }
 
         private void Btn_cancelar_Click(object sender, EventArgs e)

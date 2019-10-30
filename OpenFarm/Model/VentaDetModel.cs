@@ -53,9 +53,9 @@ namespace Model
 
         public DateTime? FecMdf { get; set; }
 
-        public int UsuCrea { get; set; }
+        public int IdUsuCrea { get; set; }
 
-        public int? UsuModf { get; set; }
+
 
 
 
