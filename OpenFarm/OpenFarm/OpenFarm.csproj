@@ -90,11 +90,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Inventario\FrmMovimiento.cs">
+    <Compile Include="HelpTeme.cs" />
+    <Compile Include="Inventario\FrmIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventario\FrmMovimiento.Designer.cs">
-      <DependentUpon>FrmMovimiento.cs</DependentUpon>
+    <Compile Include="Inventario\FrmIngreso.Designer.cs">
+      <DependentUpon>FrmIngreso.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventario\prueba.cs">
       <SubType>Form</SubType>
@@ -119,6 +120,12 @@
     </Compile>
     <Compile Include="Mantenimiento\FrmDialogCliente.Designer.cs">
       <DependentUpon>FrmDialogCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmDialogProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmDialogProducto.Designer.cs">
+      <DependentUpon>FrmDialogProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimiento\FrmEmpresa.cs">
       <SubType>Form</SubType>
@@ -163,8 +170,8 @@
     <Compile Include="Ventas\FrmVenta.Designer.cs">
       <DependentUpon>FrmVenta.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Inventario\FrmMovimiento.resx">
-      <DependentUpon>FrmMovimiento.cs</DependentUpon>
+    <EmbeddedResource Include="Inventario\FrmIngreso.resx">
+      <DependentUpon>FrmIngreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\prueba.resx">
       <DependentUpon>prueba.cs</DependentUpon>
@@ -177,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\FrmDialogCliente.resx">
       <DependentUpon>FrmDialogCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FrmDialogProducto.resx">
+      <DependentUpon>FrmDialogProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\FrmMarca.resx">
       <DependentUpon>FrmMarca.cs</DependentUpon>

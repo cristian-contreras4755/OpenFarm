@@ -1,4 +1,5 @@
 ﻿
+using OpenFarm.Inventario;
 using OpenFarm.Mantenimiento;
 using OpenFarm.Ventas;
 using System;
@@ -19,7 +20,7 @@ namespace OpenFarm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCliente());
+            Application.Run(new FrmIngreso());
         }
     }
 }

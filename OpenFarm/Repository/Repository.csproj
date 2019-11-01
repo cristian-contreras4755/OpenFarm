@@ -48,7 +48,7 @@
     <Compile Include="ClienteRepository.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="EmpresaRepository.cs" />
-    <Compile Include="InventarioRepository.cs" />
+    <Compile Include="IngresoRepository.cs" />
     <Compile Include="MarcaRepository.cs" />
     <Compile Include="ProductoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

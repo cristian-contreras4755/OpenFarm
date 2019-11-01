@@ -68,10 +68,9 @@
     <Compile Include="ClienteModel.cs" />
     <Compile Include="DtoBModel.cs" />
     <Compile Include="EmpresaModel.cs" />
-    <Compile Include="InventarioModel.cs" />
+    <Compile Include="IngresoModel.cs" />
     <Compile Include="MarcaModel.cs" />
-    <Compile Include="MovDetModel.cs" />
-    <Compile Include="MovimientoModel.cs" />
+    <Compile Include="IngresoDetModel.cs" />
     <Compile Include="ProductoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RolModel.cs" />

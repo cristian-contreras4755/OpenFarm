@@ -1,22 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace OpenFarm.Inventario
+namespace Common.Help
 {
-    public partial class FrmMovimiento : MaterialSkin.Controls.MaterialForm
+   public class HelpTeme
     {
-        public FrmMovimiento()
+        public void InicializarTema(MaterialSkin.Controls.MaterialForm fmr)
         {
-            InitializeComponent();
             var skinmanager = MaterialSkin.MaterialSkinManager.Instance;
-            skinmanager.AddFormToManage(this);
+            skinmanager.AddFormToManage(fmr);
             skinmanager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             skinmanager.ColorScheme = new MaterialSkin.ColorScheme(
                    MaterialSkin.Primary.LightBlue500,
@@ -25,11 +20,6 @@ namespace OpenFarm.Inventario
                  MaterialSkin.Accent.Blue200,
                 MaterialSkin.TextShade.WHITE
                 );
-        }
-
-        private void FrmMovimiento_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -37,5 +37,16 @@ namespace Bussines
         }
 
 
+
+        public ClassResult TipoDoc_Cons()
+        {
+            VentaRepository _ventaRepository = new VentaRepository();
+            return _ventaRepository.TipoDoc_Cons();
+        }
+
+        
+
+
+
     }
 }

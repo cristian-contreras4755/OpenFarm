@@ -195,6 +195,36 @@ namespace Repository
                 return cr;
             }
         }
+        public ClassResult TipoDoc_Cons()
+        {
+            ClassResult cr = new ClassResult();
+            Conexion _conexion = new Conexion();
+            try
+            {
+                DataTable DtResultado = new DataTable("TipoDoc");
+                using (SqlConnection connection = new SqlConnection(_conexion.Getconnection()))
+                {
+
+                    SqlCommand SqlCmd = new SqlCommand();
+                    SqlCmd.Connection = connection;
+                    SqlCmd.CommandText = "sp_venta_TipoDoc_cons";
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                    SqlDat.Fill(DtResultado);
+                    cr.HuboError = false;
+                    cr.Dt1 = DtResultado;
+                    return cr;
+                }
+            }
+            catch (Exception ex)
+            {
+                cr.HuboError = true;
+                cr.ErrorMsj = ex.Message;
+                cr.LugarError = "TipoDoc()";
+                return cr;
+            }
+        }
 
     }
 }

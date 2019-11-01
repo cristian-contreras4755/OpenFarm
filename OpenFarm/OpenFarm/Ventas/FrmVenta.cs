@@ -57,8 +57,8 @@ namespace OpenFarm.Ventas
 
             List<Detalles> lista = new List<Detalles>();
 
-            Detalles det = new Detalles { cantidad = 2, DsctUnit = 5200, PrecioUnit = 60.00, Total = 150.00, Producto = "papa" };
-            Detalles det1 = new Detalles { cantidad = 2, DsctUnit = 5200, PrecioUnit = 60.00, Total = 150.00, Producto = "camote" };
+            Detalles det = new Detalles { cantidad = 3000, DsctUnit = 52000, PrecioUnit = 60.00, Total = 150.00, Producto = "papa" };
+            Detalles det1 = new Detalles { cantidad = 50, DsctUnit = 52000, PrecioUnit = 60.00, Total = 150.00, Producto = "camote" };
             lista.Add(det);
             lista.Add(det1);
 
@@ -74,19 +74,18 @@ namespace OpenFarm.Ventas
             Rectangle rect = new Rectangle(X, Y, 300, 30);
             var formato = new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
 
-
-
-            Rectangle Rec_derecho = new Rectangle(X, Y, 300, 30);
-            var formato_derecho = new StringFormat() { Alignment = StringAlignment.Near };
-
-
-
             e.Graphics.DrawString("ACEROS  AREQUIPA SOCIENDAD ANONIMA CERRADA", font, Brushes.Black, rect, formato);
             Y = Y + 15;
 
-            e.Graphics.DrawString("RUC : 201504544154", font, Brushes.Black, X, Y);
+
+            var formato_isquierda = new StringFormat() { Alignment = StringAlignment.Near, LineAlignment = StringAlignment.Center };
+
+            Rectangle Rec_derecho = new Rectangle(X, Y, 300, 30);
+            e.Graphics.DrawString("RUC : 201504544154", font, Brushes.Black, Rec_derecho, formato);
             Y = Y + 15;
-            e.Graphics.DrawString("DIRECCION : ate vitarte sadsad", font, Brushes.Black, X, Y);
+
+            Rectangle Rec_Direccion = new Rectangle(X, Y, 300, 30);
+            e.Graphics.DrawString("DIRECCION : ate vitarte sadsad", font, Brushes.Black, Rec_Direccion, formato);
             Y = Y + 15;
             e.Graphics.DrawString("-------------------------------------------------------------------------------------", font, Brushes.Black, X, Y);
             Y = Y + 15;
@@ -98,24 +97,54 @@ namespace OpenFarm.Ventas
             Y = Y + 15;
             e.Graphics.DrawString("Fecha  :27-09-2019     Hora:17:50:16", font, Brushes.Black, X, Y);
             Y = Y + 15;
-            e.Graphics.DrawString("Cajero  :", font, Brushes.Black, X, Y);
+
+            Rectangle Rec_Cajero = new Rectangle(X, Y, 300, 30);
+            e.Graphics.DrawString("Cajero  :", font, Brushes.Black, Rec_Cajero, formato_isquierda);
             Y = Y + 15;
-            e.Graphics.DrawString("Cliente  : clientes varios", font, Brushes.Black, X, Y);
+
+            Rectangle Rec_Cliente = new Rectangle(X, Y, 300, 30);
+            e.Graphics.DrawString("Cliente  : Cristian Angel Quicaño contreras Fuentes perez figueroa", font, Brushes.Black, Rec_Cliente, formato_isquierda);
             Y = Y + 15;
-            e.Graphics.DrawString("Nro Doc  : 00000001", font, Brushes.Black, X, Y);
+
+            Rectangle Rec_nroDocCli = new Rectangle(X, Y, 300, 30);
+            e.Graphics.DrawString("Nro Doc  : 00000001", font, Brushes.Black, Rec_nroDocCli, formato_isquierda);
             Y = Y + 15;
+
             e.Graphics.DrawString("-------------------------------------------------------------------------------------", font, Brushes.Black, X, Y);
             Y = Y + 15;
-            e.Graphics.DrawString("DESCRIPCION     CANT        PRECIO      DSCTO        TOTAL", FuenteCabDet, Brushes.Black, X, Y);
+
+            Rectangle Rec_CabDet = new Rectangle(X, Y, 300, 30);
+
+            e.Graphics.DrawString("CANT        PRECIO      DSCTO        TOTAL    DESCRIPCION", FuenteCabDet, Brushes.Black, Rec_CabDet, formato_isquierda);
             Y = Y + 15;
-            e.Graphics.DrawString("-------------------------------------------------------------------------------------", font, Brushes.Black, X, Y);
+
+            Rectangle Rec_CabDet_line = new Rectangle(X, Y, 330, 30);
+            e.Graphics.DrawString("-------------------------------------------------------------------------------------", font, Brushes.Black, Rec_CabDet_line, formato_isquierda);
             Y = Y + 15;
             foreach (var item in lista)
             {
 
                 Rectangle rectDet = new Rectangle(X, Y, 300, 30);
                 var formatoDet = new StringFormat() { Alignment = StringAlignment.Near };
-                e.Graphics.DrawString(item.Producto + "   " + item.cantidad + "   " + item.PrecioUnit + "   " + item.Total, font, Brushes.Black, rectDet);
+                int cant = item.cantidad.ToString().Length;
+
+
+
+                Rectangle rectCantidadDet = new Rectangle(X, Y, 70, 30);
+                Rectangle rectPrecioDet = new Rectangle(X+30, Y, 70, 30);
+              //  Rectangle rectDesctoDet = new Rectangle(X+20, Y, 70, 30);
+               // Rectangle rectTotalDet = new Rectangle(X+20, Y, 70, 30);
+               // Rectangle rectDescripcionDet = new Rectangle(X+20, Y, 70, 30);
+
+                //     e.Graphics.DrawString("  "+item.cantidad + "             " + item.PrecioUnit + "             " + item.DsctUnit + "             " + item.Total + "             " + item.Producto, font, Brushes.Black, rectDet, formato_isquierda);
+
+
+                e.Graphics.DrawString(""+ item.cantidad , font, Brushes.Black, rectCantidadDet, formato_isquierda);
+                e.Graphics.DrawString("" + item.PrecioUnit, font, Brushes.Black, rectPrecioDet, formato_isquierda);
+              //  e.Graphics.DrawString("" + item.DsctUnit, font, Brushes.Black, rectDesctoDet, formato_isquierda);
+               // e.Graphics.DrawString("" + item.Total, font, Brushes.Black, rectTotalDet, formato_isquierda);
+               // e.Graphics.DrawString("" + item.Producto, font, Brushes.Black, rectDescripcionDet, formato_isquierda);
+
                 Y = Y + 15;
             }
             e.Graphics.DrawString("-------------------------------------------------------------------------------------", font, Brushes.Black, X, Y);

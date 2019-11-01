@@ -36,6 +36,7 @@
             this.btn_buscar_cliente = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txt_producto = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt = new System.Windows.Forms.Button();
             this.btn_cliente = new System.Windows.Forms.Button();
             this.btn_print = new System.Windows.Forms.Button();
             this.btn_cobrar = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.printDocumentTicket = new System.Drawing.Printing.PrintDocument();
             this.printDialogticket = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialogTicket = new System.Windows.Forms.PrintPreviewDialog();
-            this.txt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DT_DetVta)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -136,6 +136,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(146, 609);
             this.panel1.TabIndex = 28;
+            // 
+            // txt
+            // 
+            this.txt.BackColor = System.Drawing.Color.Lime;
+            this.txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt.Location = new System.Drawing.Point(14, 201);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(119, 59);
+            this.txt.TabIndex = 19;
+            this.txt.Text = "COBRAR";
+            this.txt.UseVisualStyleBackColor = false;
             // 
             // btn_cliente
             // 
@@ -358,17 +369,6 @@
             this.printPreviewDialogTicket.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialogTicket.Icon")));
             this.printPreviewDialogTicket.Name = "printPreviewDialogTicket";
             this.printPreviewDialogTicket.Visible = false;
-            // 
-            // txt
-            // 
-            this.txt.BackColor = System.Drawing.Color.Lime;
-            this.txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt.Location = new System.Drawing.Point(14, 201);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(119, 59);
-            this.txt.TabIndex = 19;
-            this.txt.Text = "COBRAR";
-            this.txt.UseVisualStyleBackColor = false;
             // 
             // FrmVenta
             // 

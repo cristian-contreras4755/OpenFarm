@@ -6,27 +6,28 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-   public class MovDetModel
+   public class IngresoDetModel
     {
 
-        public int IdMovDet { get; set; }
+        public int IdIngDet { get; set; }
 
 
-        public string Cd_Mov { get; set; }
+        public string Cd_Ing { get; set; }
 
+   
         public string Cd_Prod { get; set; }
 
 
         public string Cd_UM { get; set; }
 
-
-        public string Cd_Mda { get; set; }
-
         public int Cant { get; set; }
+
 
         public decimal? CosUnt { get; set; }
 
+
         public decimal? PrecioCom { get; set; }
+
 
         public decimal? PrecioVta { get; set; }
 
@@ -34,19 +35,17 @@ namespace Model
 
         public int? Stock_Actual { get; set; }
 
+
         public DateTime? Fecha_produccion { get; set; }
 
 
         public DateTime? Fecha_vencimiento { get; set; }
 
-
         public decimal? Total { get; set; }
 
-        public DateTime? FecMdf { get; set; }
+        public DateTime? FecReg { get; set; }
 
         public int IdUsuCrea { get; set; }
-
-        public int? IdUsuModf { get; set; }
 
         public bool IB_Anulado { get; set; }
 

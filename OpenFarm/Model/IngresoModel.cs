@@ -6,26 +6,36 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-  public  class MovimientoModel
+  public  class IngresoModel
     {
-        public string Cd_Mov { get; set; }
+
+        public string Cd_Ing { get; set; }
+
 
         public string Ejer { get; set; }
 
 
         public string Cd_TD { get; set; }
 
+
         public string NroDoc { get; set; }
+
 
         public string NroSre { get; set; }
 
+
+        public string Cd_Mda { get; set; }
         public string Cd_TM { get; set; }
 
-        public string Cd_Clt { get; set; }
 
-        public string Cd_Vta { get; set; }
+        public string Proveedor { get; set; }
 
-        public string Cd_Prov { get; set; }
+        public decimal? BIM_Neto { get; set; }
+
+
+        public decimal? Total { get; set; }
+
+        public decimal? Igv { get; set; }
 
         public DateTime? FecMov { get; set; }
 
@@ -38,5 +48,8 @@ namespace Model
         public int? IdUsuCrea { get; set; }
 
         public bool IB_Anulado { get; set; }
+
+
+
     }
 }
