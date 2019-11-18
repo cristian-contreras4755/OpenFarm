@@ -1,6 +1,8 @@
 ﻿using Bussines;
 using Common;
 using Common.Help;
+using Model;
+using OpenFarm.Inventario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,10 +19,16 @@ namespace OpenFarm.Mantenimiento
     {
 
 
-        enum ModuloCons
+        ModuloCons moduloconsulta;
+
+        public ProductoModel ProductoModel { get; set; }
+
+        public enum ModuloCons
         {
             FrmVentas, FrmIngreso
         }
+
+
         public FrmDialogProducto()
         {
             InitializeComponent();
@@ -30,10 +38,12 @@ namespace OpenFarm.Mantenimiento
 
 
 
-        public FrmDialogProducto(ModuloCons.FrmIngreso,)
+        public FrmDialogProducto(ModuloCons m)
         {
             InitializeComponent();
-            
+            HelpTeme teme = new HelpTeme();
+            teme.InicializarTema(this);
+            moduloconsulta =m ;
         }
 
 
@@ -55,7 +65,7 @@ namespace OpenFarm.Mantenimiento
             cr = ctr.Producto_Cons();
             DataTable data = cr.Dt1;
             DRG_Producto.DataSource = data;
-            OcultarColumnas();
+
         }
 
 
@@ -64,6 +74,44 @@ namespace OpenFarm.Mantenimiento
         {
             //    this.DRG_Producto.Columns["Id_Categoria"].Visible = false;
         }
+
+        private void DRG_Producto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DRG_Producto_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ProductoModel model = new ProductoModel();
+
+            model.Cd_Prod = DRG_Producto.CurrentRow.Cells["Codigo"].Value.ToString();
+            model.Nombre1 = DRG_Producto.CurrentRow.Cells["NombrePrin"].Value.ToString();
+
+            switch (moduloconsulta)
+            {
+                case ModuloCons.FrmVentas:
+
+                    break;
+                case ModuloCons.FrmIngreso:
+                    this.ProductoModel = model;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+
+                   // this.Dispose();
+                    break;
+                default:
+                    break;
+            }
+
+
+
+
+        }
+
+
+
+
+
 
     }
 }

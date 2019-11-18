@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVenta));
             this.DT_DetVta = new System.Windows.Forms.DataGridView();
             this.txt_Marca = new System.Windows.Forms.TextBox();
@@ -39,8 +39,9 @@
             this.txt = new System.Windows.Forms.Button();
             this.btn_cliente = new System.Windows.Forms.Button();
             this.btn_print = new System.Windows.Forms.Button();
-            this.btn_cobrar = new System.Windows.Forms.Button();
+            this.btn_Terminar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,12 +53,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_agregar_producto = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.printDocumentTicket = new System.Drawing.Printing.PrintDocument();
             this.printDialogticket = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialogTicket = new System.Windows.Forms.PrintPreviewDialog();
+            this.lbl_NroDocCli = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btn_nuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DT_DetVta)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,23 +81,23 @@
             this.DT_DetVta.Location = new System.Drawing.Point(7, 83);
             this.DT_DetVta.MultiSelect = false;
             this.DT_DetVta.Name = "DT_DetVta";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DT_DetVta.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.DT_DetVta.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DT_DetVta.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.DT_DetVta.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DT_DetVta.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.DT_DetVta.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DT_DetVta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DT_DetVta.Size = new System.Drawing.Size(847, 506);
+            this.DT_DetVta.Size = new System.Drawing.Size(816, 506);
             this.DT_DetVta.TabIndex = 25;
             // 
             // txt_Marca
@@ -127,32 +132,34 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btn_nuevo);
             this.panel1.Controls.Add(this.txt);
             this.panel1.Controls.Add(this.btn_cliente);
             this.panel1.Controls.Add(this.btn_print);
-            this.panel1.Controls.Add(this.btn_cobrar);
+            this.panel1.Controls.Add(this.btn_Terminar);
             this.panel1.Location = new System.Drawing.Point(1273, 64);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(146, 609);
+            this.panel1.Size = new System.Drawing.Size(347, 589);
             this.panel1.TabIndex = 28;
             // 
             // txt
             // 
             this.txt.BackColor = System.Drawing.Color.Lime;
             this.txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt.Location = new System.Drawing.Point(14, 201);
+            this.txt.Location = new System.Drawing.Point(21, 278);
             this.txt.Name = "txt";
             this.txt.Size = new System.Drawing.Size(119, 59);
             this.txt.TabIndex = 19;
-            this.txt.Text = "COBRAR";
+            this.txt.Text = "SALIR";
             this.txt.UseVisualStyleBackColor = false;
             // 
             // btn_cliente
             // 
             this.btn_cliente.BackColor = System.Drawing.Color.Lime;
             this.btn_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cliente.Location = new System.Drawing.Point(14, 6);
+            this.btn_cliente.Location = new System.Drawing.Point(21, 83);
             this.btn_cliente.Name = "btn_cliente";
             this.btn_cliente.Size = new System.Drawing.Size(119, 59);
             this.btn_cliente.TabIndex = 18;
@@ -164,28 +171,34 @@
             // 
             this.btn_print.BackColor = System.Drawing.Color.Lime;
             this.btn_print.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_print.Location = new System.Drawing.Point(14, 136);
+            this.btn_print.Location = new System.Drawing.Point(21, 213);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(119, 59);
             this.btn_print.TabIndex = 17;
-            this.btn_print.Text = "IMPRIMIR";
+            this.btn_print.Text = "BUSCAR IMPRIMIR";
             this.btn_print.UseVisualStyleBackColor = false;
             this.btn_print.Click += new System.EventHandler(this.Btn_print_Click);
             // 
-            // btn_cobrar
+            // btn_Terminar
             // 
-            this.btn_cobrar.BackColor = System.Drawing.Color.Lime;
-            this.btn_cobrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cobrar.Location = new System.Drawing.Point(14, 71);
-            this.btn_cobrar.Name = "btn_cobrar";
-            this.btn_cobrar.Size = new System.Drawing.Size(119, 59);
-            this.btn_cobrar.TabIndex = 16;
-            this.btn_cobrar.Text = "COBRAR";
-            this.btn_cobrar.UseVisualStyleBackColor = false;
+            this.btn_Terminar.BackColor = System.Drawing.Color.Lime;
+            this.btn_Terminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Terminar.Location = new System.Drawing.Point(21, 148);
+            this.btn_Terminar.Name = "btn_Terminar";
+            this.btn_Terminar.Size = new System.Drawing.Size(119, 59);
+            this.btn_Terminar.TabIndex = 16;
+            this.btn_Terminar.Text = "TERMINAR IMPRIMIR";
+            this.btn_Terminar.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
+            this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.lbl_NroDocCli);
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label6);
@@ -197,10 +210,21 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txt_Marca);
-            this.panel2.Location = new System.Drawing.Point(860, 64);
+            this.panel2.Location = new System.Drawing.Point(829, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(407, 589);
+            this.panel2.Size = new System.Drawing.Size(438, 589);
             this.panel2.TabIndex = 29;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label12.Location = new System.Drawing.Point(4, 83);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 19);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Nro Doc :";
             // 
             // label11
             // 
@@ -209,6 +233,7 @@
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label11.Location = new System.Drawing.Point(73, 50);
             this.label11.Name = "label11";
+            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label11.Size = new System.Drawing.Size(339, 19);
             this.label11.TabIndex = 34;
             this.label11.Text = "cristian aaaaaaaaa aaaaaaaaaaaa aaa";
@@ -262,7 +287,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(18, 111);
+            this.label5.Location = new System.Drawing.Point(4, 213);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 19);
             this.label5.TabIndex = 29;
@@ -273,7 +298,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(16, 147);
+            this.label4.Location = new System.Drawing.Point(2, 249);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 32);
             this.label4.TabIndex = 28;
@@ -284,7 +309,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(71, 147);
+            this.label3.Location = new System.Drawing.Point(57, 249);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 32);
             this.label3.TabIndex = 27;
@@ -314,25 +339,14 @@
             // 
             // panel3
             // 
+            this.panel3.AutoSize = true;
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Controls.Add(this.btn_agregar_producto);
             this.panel3.Controls.Add(this.DT_DetVta);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Location = new System.Drawing.Point(0, 64);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1422, 609);
+            this.panel3.Size = new System.Drawing.Size(1643, 724);
             this.panel3.TabIndex = 31;
-            // 
-            // btn_agregar_producto
-            // 
-            this.btn_agregar_producto.BackColor = System.Drawing.Color.Lime;
-            this.btn_agregar_producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar_producto.Location = new System.Drawing.Point(717, 3);
-            this.btn_agregar_producto.Name = "btn_agregar_producto";
-            this.btn_agregar_producto.Size = new System.Drawing.Size(137, 74);
-            this.btn_agregar_producto.TabIndex = 35;
-            this.btn_agregar_producto.Text = "CLIENTE";
-            this.btn_agregar_producto.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
@@ -342,7 +356,7 @@
             this.panel5.Controls.Add(this.txt_producto);
             this.panel5.Location = new System.Drawing.Point(7, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(704, 74);
+            this.panel5.Size = new System.Drawing.Size(816, 74);
             this.panel5.TabIndex = 34;
             // 
             // label9
@@ -370,12 +384,69 @@
             this.printPreviewDialogTicket.Name = "printPreviewDialogTicket";
             this.printPreviewDialogTicket.Visible = false;
             // 
+            // lbl_NroDocCli
+            // 
+            this.lbl_NroDocCli.AutoSize = true;
+            this.lbl_NroDocCli.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_NroDocCli.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_NroDocCli.Location = new System.Drawing.Point(77, 83);
+            this.lbl_NroDocCli.Name = "lbl_NroDocCli";
+            this.lbl_NroDocCli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_NroDocCli.Size = new System.Drawing.Size(16, 19);
+            this.lbl_NroDocCli.TabIndex = 36;
+            this.lbl_NroDocCli.Text = "-";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label13.Location = new System.Drawing.Point(4, 123);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(94, 19);
+            this.label13.TabIndex = 39;
+            this.label13.Text = "Descuento:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label14.Location = new System.Drawing.Point(2, 159);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 32);
+            this.label14.TabIndex = 38;
+            this.label14.Text = "S/.";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label15.Location = new System.Drawing.Point(57, 159);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(83, 32);
+            this.label15.TabIndex = 37;
+            this.label15.Text = "00.00";
+            // 
+            // btn_nuevo
+            // 
+            this.btn_nuevo.BackColor = System.Drawing.Color.Lime;
+            this.btn_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nuevo.Location = new System.Drawing.Point(21, 18);
+            this.btn_nuevo.Name = "btn_nuevo";
+            this.btn_nuevo.Size = new System.Drawing.Size(119, 59);
+            this.btn_nuevo.TabIndex = 20;
+            this.btn_nuevo.Text = "NUEVO";
+            this.btn_nuevo.UseVisualStyleBackColor = false;
+            // 
             // FrmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1425, 702);
+            this.ClientSize = new System.Drawing.Size(1685, 822);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
@@ -390,6 +461,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -417,10 +489,15 @@
         private System.Drawing.Printing.PrintDocument printDocumentTicket;
         private System.Windows.Forms.PrintDialog printDialogticket;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialogTicket;
-        private System.Windows.Forms.Button btn_cobrar;
+        private System.Windows.Forms.Button btn_Terminar;
         private System.Windows.Forms.Button btn_print;
         private System.Windows.Forms.Button btn_cliente;
-        private System.Windows.Forms.Button btn_agregar_producto;
         private System.Windows.Forms.Button txt;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lbl_NroDocCli;
+        private System.Windows.Forms.Button btn_nuevo;
     }
 }

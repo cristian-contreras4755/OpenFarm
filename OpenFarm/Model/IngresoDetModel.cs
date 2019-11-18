@@ -23,9 +23,6 @@ namespace Model
         public int Cant { get; set; }
 
 
-        public decimal? CosUnt { get; set; }
-
-
         public decimal? PrecioCom { get; set; }
 
 

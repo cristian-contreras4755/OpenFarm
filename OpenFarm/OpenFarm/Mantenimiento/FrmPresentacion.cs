@@ -11,17 +11,16 @@ using System.Windows.Forms;
 
 namespace OpenFarm.Mantenimiento
 {
-    public partial class FrmDialogCliente : MaterialSkin.Controls.MaterialForm
+    public partial class FrmPresentacion : MaterialSkin.Controls.MaterialForm
     {
-        public FrmDialogCliente()
+        public FrmPresentacion()
         {
             InitializeComponent();
             HelpTeme teme = new HelpTeme();
             teme.InicializarTema(this);
-
         }
 
-        private void FrmDialogCliente_Load(object sender, EventArgs e)
+        private void FrmPresentacion_Load(object sender, EventArgs e)
         {
 
         }

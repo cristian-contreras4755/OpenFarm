@@ -44,10 +44,9 @@
   <ItemGroup>
     <Compile Include="ClassResult.cs" />
     <Compile Include="DtoBModel.cs" />
+    <Compile Include="Help\helpValidacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Help\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

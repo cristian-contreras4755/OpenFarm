@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DT_IngresoDet = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.cb_Cd_TDI = new System.Windows.Forms.ComboBox();
-            this.txt_RSocial = new System.Windows.Forms.TextBox();
+            this.cb_Cd_TD = new System.Windows.Forms.ComboBox();
+            this.txt_serie = new System.Windows.Forms.TextBox();
             this.btn_cancelar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txt_NDoc = new System.Windows.Forms.TextBox();
+            this.txt_nroDoc = new System.Windows.Forms.TextBox();
             this.btn_guardar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_proveedor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,18 +49,23 @@
             this.lblimpuesto = new System.Windows.Forms.Label();
             this.lbl_total = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_precioVta = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_precioCom = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btn_Agregaritem = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.npd_cantidad = new System.Windows.Forms.NumericUpDown();
             this.btn_buscarCliente = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txt_buscar = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.txt_producto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.ft_FP = new System.Windows.Forms.DateTimePicker();
+            this.dt_FP = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dt_FV = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DT_IngresoDet)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npd_cantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // DT_IngresoDet
@@ -68,38 +73,38 @@
             this.DT_IngresoDet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.DT_IngresoDet.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DT_IngresoDet.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DT_IngresoDet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.DT_IngresoDet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DT_IngresoDet.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DT_IngresoDet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DT_IngresoDet.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DT_IngresoDet.GridColor = System.Drawing.Color.SteelBlue;
-            this.DT_IngresoDet.Location = new System.Drawing.Point(8, 114);
+            this.DT_IngresoDet.Location = new System.Drawing.Point(10, 155);
             this.DT_IngresoDet.MultiSelect = false;
             this.DT_IngresoDet.Name = "DT_IngresoDet";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DT_IngresoDet.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.DT_IngresoDet.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DT_IngresoDet.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.DT_IngresoDet.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DT_IngresoDet.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.DT_IngresoDet.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DT_IngresoDet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DT_IngresoDet.Size = new System.Drawing.Size(862, 280);
+            this.DT_IngresoDet.Size = new System.Drawing.Size(862, 266);
             this.DT_IngresoDet.TabIndex = 33;
+            this.DT_IngresoDet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DT_IngresoDet_KeyPress);
             // 
             // label7
             // 
@@ -137,22 +142,22 @@
             this.label10.TabIndex = 60;
             this.label10.Text = "Nro. :";
             // 
-            // cb_Cd_TDI
+            // cb_Cd_TD
             // 
-            this.cb_Cd_TDI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Cd_TDI.FormattingEnabled = true;
-            this.cb_Cd_TDI.Location = new System.Drawing.Point(105, 71);
-            this.cb_Cd_TDI.Name = "cb_Cd_TDI";
-            this.cb_Cd_TDI.Size = new System.Drawing.Size(147, 26);
-            this.cb_Cd_TDI.TabIndex = 1;
+            this.cb_Cd_TD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Cd_TD.FormattingEnabled = true;
+            this.cb_Cd_TD.Location = new System.Drawing.Point(105, 71);
+            this.cb_Cd_TD.Name = "cb_Cd_TD";
+            this.cb_Cd_TD.Size = new System.Drawing.Size(147, 26);
+            this.cb_Cd_TD.TabIndex = 1;
             // 
-            // txt_RSocial
+            // txt_serie
             // 
-            this.txt_RSocial.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_RSocial.Location = new System.Drawing.Point(105, 103);
-            this.txt_RSocial.Name = "txt_RSocial";
-            this.txt_RSocial.Size = new System.Drawing.Size(136, 25);
-            this.txt_RSocial.TabIndex = 3;
+            this.txt_serie.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_serie.Location = new System.Drawing.Point(105, 103);
+            this.txt_serie.Name = "txt_serie";
+            this.txt_serie.Size = new System.Drawing.Size(136, 25);
+            this.txt_serie.TabIndex = 3;
             // 
             // btn_cancelar
             // 
@@ -166,13 +171,13 @@
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
             // 
-            // txt_NDoc
+            // txt_nroDoc
             // 
-            this.txt_NDoc.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NDoc.Location = new System.Drawing.Point(105, 135);
-            this.txt_NDoc.Name = "txt_NDoc";
-            this.txt_NDoc.Size = new System.Drawing.Size(278, 25);
-            this.txt_NDoc.TabIndex = 4;
+            this.txt_nroDoc.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nroDoc.Location = new System.Drawing.Point(105, 135);
+            this.txt_nroDoc.Name = "txt_nroDoc";
+            this.txt_nroDoc.Size = new System.Drawing.Size(278, 25);
+            this.txt_nroDoc.TabIndex = 4;
             // 
             // btn_guardar
             // 
@@ -185,6 +190,7 @@
             this.btn_guardar.TabIndex = 55;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
             // 
             // label9
             // 
@@ -198,13 +204,13 @@
             this.label9.TabIndex = 78;
             this.label9.Text = "Proveedor. :";
             // 
-            // textBox1
+            // txt_proveedor
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(601, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(278, 25);
-            this.textBox1.TabIndex = 2;
+            this.txt_proveedor.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_proveedor.Location = new System.Drawing.Point(601, 70);
+            this.txt_proveedor.Name = "txt_proveedor";
+            this.txt_proveedor.Size = new System.Drawing.Size(278, 25);
+            this.txt_proveedor.TabIndex = 2;
             // 
             // label2
             // 
@@ -281,11 +287,112 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.txt_precioVta);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.txt_precioCom);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.btn_Agregaritem);
             this.panel1.Controls.Add(this.DT_IngresoDet);
-            this.panel1.Location = new System.Drawing.Point(12, 170);
+            this.panel1.Controls.Add(this.npd_cantidad);
+            this.panel1.Location = new System.Drawing.Point(6, 170);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(873, 524);
+            this.panel1.Size = new System.Drawing.Size(884, 524);
             this.panel1.TabIndex = 85;
+            // 
+            // label14
+            // 
+            this.label14.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label14.Location = new System.Drawing.Point(306, 84);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(99, 19);
+            this.label14.TabIndex = 99;
+            this.label14.Text = "Precio Vta. :";
+            // 
+            // txt_precioVta
+            // 
+            this.txt_precioVta.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.txt_precioVta.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_precioVta.Location = new System.Drawing.Point(411, 82);
+            this.txt_precioVta.Name = "txt_precioVta";
+            this.txt_precioVta.Size = new System.Drawing.Size(153, 25);
+            this.txt_precioVta.TabIndex = 98;
+            this.txt_precioVta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_precioVta_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label13.Location = new System.Drawing.Point(21, 84);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(111, 19);
+            this.label13.TabIndex = 97;
+            this.label13.Text = "Precio Com. :";
+            // 
+            // txt_precioCom
+            // 
+            this.txt_precioCom.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.txt_precioCom.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_precioCom.Location = new System.Drawing.Point(140, 82);
+            this.txt_precioCom.Name = "txt_precioCom";
+            this.txt_precioCom.Size = new System.Drawing.Size(153, 25);
+            this.txt_precioCom.TabIndex = 96;
+            this.txt_precioCom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_precioCom_KeyPress);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label11.Location = new System.Drawing.Point(535, 52);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(87, 19);
+            this.label11.TabIndex = 94;
+            this.label11.Text = "Cantidad:";
+            // 
+            // btn_Agregaritem
+            // 
+            this.btn_Agregaritem.Depth = 0;
+            this.btn_Agregaritem.Location = new System.Drawing.Point(10, 124);
+            this.btn_Agregaritem.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_Agregaritem.Name = "btn_Agregaritem";
+            this.btn_Agregaritem.Primary = true;
+            this.btn_Agregaritem.Size = new System.Drawing.Size(69, 25);
+            this.btn_Agregaritem.TabIndex = 95;
+            this.btn_Agregaritem.Text = "Agregar";
+            this.btn_Agregaritem.UseVisualStyleBackColor = true;
+            this.btn_Agregaritem.Click += new System.EventHandler(this.Btn_Agregaritem_Click);
+            // 
+            // npd_cantidad
+            // 
+            this.npd_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.npd_cantidad.Location = new System.Drawing.Point(628, 51);
+            this.npd_cantidad.Maximum = new decimal(new int[] {
+            30000,
+            0,
+            0,
+            0});
+            this.npd_cantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.npd_cantidad.Name = "npd_cantidad";
+            this.npd_cantidad.Size = new System.Drawing.Size(101, 26);
+            this.npd_cantidad.TabIndex = 8;
+            this.npd_cantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btn_buscarCliente
             // 
@@ -300,36 +407,13 @@
             this.btn_buscarCliente.UseVisualStyleBackColor = true;
             this.btn_buscarCliente.Click += new System.EventHandler(this.Btn_buscarCliente_Click);
             // 
-            // txt_buscar
+            // txt_producto
             // 
-            this.txt_buscar.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_buscar.Location = new System.Drawing.Point(146, 185);
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(488, 25);
-            this.txt_buscar.TabIndex = 86;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(148, 252);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(101, 26);
-            this.numericUpDown1.TabIndex = 8;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.txt_producto.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_producto.Location = new System.Drawing.Point(146, 185);
+            this.txt_producto.Name = "txt_producto";
+            this.txt_producto.Size = new System.Drawing.Size(488, 25);
+            this.txt_producto.TabIndex = 86;
             // 
             // label5
             // 
@@ -343,15 +427,15 @@
             this.label5.TabIndex = 89;
             this.label5.Text = "Producto:";
             // 
-            // ft_FP
+            // dt_FP
             // 
-            this.ft_FP.CustomFormat = "dd-MM-yyyy";
-            this.ft_FP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ft_FP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ft_FP.Location = new System.Drawing.Point(148, 219);
-            this.ft_FP.Name = "ft_FP";
-            this.ft_FP.Size = new System.Drawing.Size(115, 22);
-            this.ft_FP.TabIndex = 6;
+            this.dt_FP.CustomFormat = "dd-MM-yyyy";
+            this.dt_FP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dt_FP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_FP.Location = new System.Drawing.Point(148, 219);
+            this.dt_FP.Name = "dt_FP";
+            this.dt_FP.Size = new System.Drawing.Size(115, 22);
+            this.dt_FP.TabIndex = 6;
             // 
             // label6
             // 
@@ -387,32 +471,18 @@
             this.dt_FV.Size = new System.Drawing.Size(115, 22);
             this.dt_FV.TabIndex = 7;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(55, 253);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 19);
-            this.label11.TabIndex = 94;
-            this.label11.Text = "Cantidad:";
-            // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 751);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dt_FV);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.ft_FP);
+            this.Controls.Add(this.dt_FP);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.btn_buscarCliente);
-            this.Controls.Add(this.txt_buscar);
+            this.Controls.Add(this.txt_producto);
             this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.lblimpuesto);
             this.Controls.Add(this.lbl_subtotal);
@@ -420,14 +490,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_proveedor);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.cb_Cd_TDI);
-            this.Controls.Add(this.txt_RSocial);
+            this.Controls.Add(this.cb_Cd_TD);
+            this.Controls.Add(this.txt_serie);
             this.Controls.Add(this.btn_cancelar);
-            this.Controls.Add(this.txt_NDoc);
+            this.Controls.Add(this.txt_nroDoc);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.panel1);
             this.Name = "FrmIngreso";
@@ -435,7 +505,8 @@
             this.Load += new System.EventHandler(this.FrmIngreso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DT_IngresoDet)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.npd_cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,13 +518,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cb_Cd_TDI;
-        private System.Windows.Forms.TextBox txt_RSocial;
+        private System.Windows.Forms.ComboBox cb_Cd_TD;
+        private System.Windows.Forms.TextBox txt_serie;
         private MaterialSkin.Controls.MaterialRaisedButton btn_cancelar;
-        private System.Windows.Forms.TextBox txt_NDoc;
+        private System.Windows.Forms.TextBox txt_nroDoc;
         private MaterialSkin.Controls.MaterialRaisedButton btn_guardar;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_proveedor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -462,13 +533,18 @@
         private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialRaisedButton btn_buscarCliente;
-        private System.Windows.Forms.TextBox txt_buscar;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox txt_producto;
+        private System.Windows.Forms.NumericUpDown npd_cantidad;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker ft_FP;
+        private System.Windows.Forms.DateTimePicker dt_FP;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dt_FV;
         private System.Windows.Forms.Label label11;
+        private MaterialSkin.Controls.MaterialRaisedButton btn_Agregaritem;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txt_precioVta;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txt_precioCom;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDialogProducto));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DRG_Producto = new System.Windows.Forms.DataGridView();
@@ -44,7 +45,7 @@
             this.DRG_Producto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DRG_Producto.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DRG_Producto.GridColor = System.Drawing.Color.SteelBlue;
-            this.DRG_Producto.Location = new System.Drawing.Point(7, 104);
+            resources.ApplyResources(this.DRG_Producto, "DRG_Producto");
             this.DRG_Producto.MultiSelect = false;
             this.DRG_Producto.Name = "DRG_Producto";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -63,39 +64,32 @@
             this.DRG_Producto.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.DRG_Producto.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DRG_Producto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DRG_Producto.Size = new System.Drawing.Size(963, 467);
-            this.DRG_Producto.TabIndex = 24;
+            this.DRG_Producto.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DRG_Producto_CellContentDoubleClick);
+            this.DRG_Producto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DRG_Producto_CellDoubleClick);
             // 
             // btn_buscar
             // 
             this.btn_buscar.Depth = 0;
-            this.btn_buscar.Location = new System.Drawing.Point(360, 73);
+            resources.ApplyResources(this.btn_buscar, "btn_buscar");
             this.btn_buscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Primary = true;
-            this.btn_buscar.Size = new System.Drawing.Size(69, 25);
-            this.btn_buscar.TabIndex = 26;
-            this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
             // 
             // txt_buscar
             // 
-            this.txt_buscar.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_buscar.Location = new System.Drawing.Point(12, 73);
+            resources.ApplyResources(this.txt_buscar, "txt_buscar");
             this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(342, 25);
-            this.txt_buscar.TabIndex = 25;
             // 
             // FrmDialogProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(975, 578);
             this.Controls.Add(this.DRG_Producto);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.txt_buscar);
+            this.MinimizeBox = false;
             this.Name = "FrmDialogProducto";
-            this.Text = "Buscar  Producto";
             this.Load += new System.EventHandler(this.FrmDialogProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DRG_Producto)).EndInit();
             this.ResumeLayout(false);

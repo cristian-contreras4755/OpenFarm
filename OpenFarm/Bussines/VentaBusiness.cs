@@ -36,16 +36,11 @@ namespace Bussines
             return _ventaRepository.VentaDet_Crea(VentaDetModel);
         }
 
-
-
         public ClassResult TipoDoc_Cons()
         {
             VentaRepository _ventaRepository = new VentaRepository();
             return _ventaRepository.TipoDoc_Cons();
         }
-
-        
-
 
 
     }

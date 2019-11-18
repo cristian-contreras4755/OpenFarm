@@ -75,7 +75,6 @@ namespace Repository
                     Parameters.Add("@Cd_Prod", ingresoDetModel.Cd_Prod, dbType: DbType.String, direction: ParameterDirection.Input, size: 7);
                     Parameters.Add("@Cd_UM", ingresoDetModel.Cd_UM, dbType: DbType.String, direction: ParameterDirection.Input, size: 2);
                     Parameters.Add("@Cant", ingresoDetModel.Cant, dbType: DbType.Int32, direction: ParameterDirection.Input);
-                    Parameters.Add("@CosUnt", ingresoDetModel.CosUnt, dbType: DbType.Decimal, direction: ParameterDirection.Input, precision: 15, scale: 7);
                     Parameters.Add("@PrecioVta", ingresoDetModel.PrecioVta, dbType: DbType.Decimal, direction: ParameterDirection.Input, precision: 15, scale: 7);
                     Parameters.Add("@PrecioCom", ingresoDetModel.PrecioCom, dbType: DbType.Decimal, direction: ParameterDirection.Input, precision: 15, scale: 7);
                     Parameters.Add("@Stock_inicial", ingresoDetModel.Stock_inicial, dbType: DbType.Int32, direction: ParameterDirection.Input);
