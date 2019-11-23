@@ -75,7 +75,7 @@
     <Compile Include="ProductoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RolModel.cs" />
-    <Compile Include="UsarioModel.cs" />
+    <Compile Include="UsuarioModel.cs" />
     <Compile Include="VentaCabModel.cs" />
     <Compile Include="VentaDetModel.cs" />
   </ItemGroup>

@@ -65,7 +65,6 @@ namespace OpenFarm.Mantenimiento
             cr = ctr.Producto_Cons();
             DataTable data = cr.Dt1;
             DRG_Producto.DataSource = data;
-
         }
 
 

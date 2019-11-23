@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-   public class UsarioModel
+   public class UsuarioModel
     {
         public int Id_Usuario { get; set; }
 
@@ -39,17 +39,10 @@ namespace Model
 
         public string Cargo { get; set; }
 
-        public string IdUsuCrea { get; set; }
+        public int IdUsuCrea { get; set; }
 
 
-        public string IdUsuMdf { get; set; }
-
-        public DateTime? FecReg { get; set; }
-
-        public DateTime? FecMdf { get; set; }
-
-
-        public string usuario1 { get; set; }
+        public string Usuario { get; set; }
 
         public string Password { get; set; }
 

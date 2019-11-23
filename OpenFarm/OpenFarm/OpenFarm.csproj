@@ -188,6 +188,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguridad\FrmDialogRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\FrmDialogRol.Designer.cs">
+      <DependentUpon>FrmDialogRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\FrmPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\FrmPermisos.Designer.cs">
+      <DependentUpon>FrmPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\FrmUsuarioCrea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\FrmUsuarioCrea.Designer.cs">
+      <DependentUpon>FrmUsuarioCrea.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\FrmVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +280,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Seguridad\FrmDialogRol.resx">
+      <DependentUpon>FrmDialogRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\FrmPermisos.resx">
+      <DependentUpon>FrmPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\FrmUsuarioCrea.resx">
+      <DependentUpon>FrmUsuarioCrea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventas\FrmVenta.resx">
       <DependentUpon>FrmVenta.cs</DependentUpon>
     </EmbeddedResource>
