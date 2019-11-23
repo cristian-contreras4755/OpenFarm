@@ -40,6 +40,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_salir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btn_Nuevo = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btn_Editar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.DRG_Producto)).BeginInit();
             this.contextMenucrud.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -83,19 +85,19 @@
             this.editarToolStripMenuItem,
             this.eliminarToolStripMenuItem});
             this.contextMenucrud.Name = "contextMenucrud";
-            this.contextMenucrud.Size = new System.Drawing.Size(181, 70);
+            this.contextMenucrud.Size = new System.Drawing.Size(118, 48);
             this.contextMenucrud.Text = "Opciones";
             // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.EliminarToolStripMenuItem_Click);
             // 
@@ -123,6 +125,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.materialRaisedButton1);
+            this.panel1.Controls.Add(this.btn_Editar);
             this.panel1.Controls.Add(this.btn_salir);
             this.panel1.Controls.Add(this.btn_Nuevo);
             this.panel1.Location = new System.Drawing.Point(0, 71);
@@ -133,13 +137,13 @@
             // btn_salir
             // 
             this.btn_salir.Depth = 0;
-            this.btn_salir.Location = new System.Drawing.Point(12, 64);
+            this.btn_salir.Location = new System.Drawing.Point(12, 160);
             this.btn_salir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Primary = true;
             this.btn_salir.Size = new System.Drawing.Size(91, 40);
             this.btn_salir.TabIndex = 14;
-            this.btn_salir.Text = "Nuevo";
+            this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
             this.btn_salir.Click += new System.EventHandler(this.Btn_salir_Click);
             // 
@@ -155,6 +159,31 @@
             this.btn_Nuevo.Text = "Nuevo";
             this.btn_Nuevo.UseVisualStyleBackColor = true;
             this.btn_Nuevo.Click += new System.EventHandler(this.Btn_Nuevo_Click);
+            // 
+            // btn_Editar
+            // 
+            this.btn_Editar.Depth = 0;
+            this.btn_Editar.Location = new System.Drawing.Point(12, 64);
+            this.btn_Editar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Primary = true;
+            this.btn_Editar.Size = new System.Drawing.Size(91, 40);
+            this.btn_Editar.TabIndex = 15;
+            this.btn_Editar.Text = "Editar";
+            this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.Click += new System.EventHandler(this.Btn_Editar_Click);
+            // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(12, 110);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(91, 40);
+            this.materialRaisedButton1.TabIndex = 16;
+            this.materialRaisedButton1.Text = "Editar";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
             // 
             // FrmProducto
             // 
@@ -188,5 +217,7 @@
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialRaisedButton btn_Nuevo;
         private MaterialSkin.Controls.MaterialRaisedButton btn_salir;
+        private MaterialSkin.Controls.MaterialRaisedButton btn_Editar;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
     }
 }

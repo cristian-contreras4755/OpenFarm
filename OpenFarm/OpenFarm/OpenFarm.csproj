@@ -115,11 +115,29 @@
     <Compile Include="Mantenimiento\FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimiento\FrmDialogCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmDialogCategoria.Designer.cs">
+      <DependentUpon>FrmDialogCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimiento\FrmDialogCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mantenimiento\FrmDialogCliente.Designer.cs">
       <DependentUpon>FrmDialogCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmDialogMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmDialogMarca.Designer.cs">
+      <DependentUpon>FrmDialogMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmDialogPresentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmDialogPresentacion.Designer.cs">
+      <DependentUpon>FrmDialogPresentacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimiento\FrmDialogProducto.cs">
       <SubType>Form</SubType>
@@ -188,8 +206,17 @@
     <EmbeddedResource Include="Mantenimiento\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FrmDialogCategoria.resx">
+      <DependentUpon>FrmDialogCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\FrmDialogCliente.resx">
       <DependentUpon>FrmDialogCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FrmDialogMarca.resx">
+      <DependentUpon>FrmDialogMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FrmDialogPresentacion.resx">
+      <DependentUpon>FrmDialogPresentacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\FrmDialogProducto.resx">
       <DependentUpon>FrmDialogProducto.cs</DependentUpon>

@@ -25,6 +25,11 @@ namespace OpenFarm.Mantenimiento
         }
 
         string  Cd_Prod="";
+        int Id_Categoria = 0;
+        int Id_Mca = 0;
+       int Id_Presentacion= 0;
+
+
         Byte[] Imagen;
 
         public FrmProductoCrea(ProductoModel productoModel) {
@@ -32,9 +37,6 @@ namespace OpenFarm.Mantenimiento
             InitializeComponent();
             HelpTeme teme = new HelpTeme();
             teme.InicializarTema(this);
-
-            ListarCategoria();
-            ListarMarca();
             llernarDatos( productoModel);
         }
 
@@ -43,8 +45,6 @@ namespace OpenFarm.Mantenimiento
         {
             if (String.IsNullOrEmpty( Cd_Prod))
             {
-                ListarCategoria();
-                ListarMarca();
             }
         }
 
@@ -107,17 +107,29 @@ namespace OpenFarm.Mantenimiento
                 return false;
             }
 
-            if (cb_categoria.Text == "")
+
+
+
+
+            if (txt_categoria.Text == "" || Id_Categoria==0)
             {
                 MessageBox.Show("Seleccione categoria");
                 return false;
             }
 
-            if (cb_marca.Text == "")
+            if (txt_presentacion.Text == ""  ||Id_Presentacion == 0)
+            {
+                MessageBox.Show("Seleccione categoria");
+                return false;
+            }
+
+            if (txt_marca.Text == ""|| Id_Mca == 0)
             {
                 MessageBox.Show("Seleccione Marca");
                 return false;
             }
+
+
             return true;
         }
 
@@ -127,8 +139,12 @@ namespace OpenFarm.Mantenimiento
             txt_nom2.Text = "";
             txt_nomcorto.Text = "";
             txt_Descripcion.Text = "";
-            cb_categoria.Text = "";
-            cb_marca.Text = "";
+             Id_Categoria = 0;
+             Id_Mca = 0;
+             Id_Presentacion = 0;
+            txt_categoria.Text = "";
+            txt_presentacion.Text = "";
+            txt_marca.Text = "";
             nud_stockmin.Value = 0;
             nud_stockmax.Value = 0;
             btn_cancelar.Visible = false;
@@ -154,8 +170,15 @@ namespace OpenFarm.Mantenimiento
                     txt_nom2.Text = row["Nombre2"].ToString();
                     txt_nomcorto.Text = row["NCorto"].ToString();
                     txt_Descripcion.Text = row["Descrip"].ToString();
-                    cb_categoria.SelectedValue = row["Id_Categoria"].ToString();
-                    cb_marca.SelectedValue = row["Id_Mca"].ToString();
+
+                    txt_categoria.Text = row["Categoria"].ToString();
+                    txt_marca.Text = row["Marca"].ToString();
+                    txt_presentacion.Text = row["Presentacion"].ToString();
+
+                    Id_Categoria = Convert.ToInt32(row["Id_Categoria"].ToString());  
+                    Id_Mca = Convert.ToInt32(row["Id_Mca"].ToString());
+                    Id_Presentacion = Convert.ToInt32(row["Id_Presentacion"].ToString());
+
                     nud_stockmin.Value = Convert.ToInt32(row["StockMin"].ToString());
                     nud_stockmax.Value = Convert.ToInt32(row["StockMax"].ToString());
 
@@ -199,8 +222,9 @@ namespace OpenFarm.Mantenimiento
                 model.Nombre2 = txt_nom2.Text;
                 model.NCorto = txt_nomcorto.Text;
                 model.Descrip = txt_Descripcion.Text;
-                model.Id_Categoria = Convert.ToInt32(cb_categoria.SelectedValue);
-                model.Id_Mca = Convert.ToInt32(cb_marca.SelectedValue);
+                model.Id_Categoria = Id_Categoria;
+                model.Id_Presentacion = Id_Presentacion;
+                model.Id_Mca = Id_Mca;
                 model.StockMin = Convert.ToInt32(nud_stockmin.Value);
                 model.StockMax = Convert.ToInt32(nud_stockmax.Value);
 
@@ -252,55 +276,15 @@ namespace OpenFarm.Mantenimiento
         }
 
 
-            public void ListarCategoria()
-            {
-
-                ClassResult cr = new ClassResult();
-                CategoriaBusiness ctr = new CategoriaBusiness();
-                cr = ctr.Categoria_Cons();
-                DataTable data = cr.Dt1;
-                cb_categoria.DataSource = data;
-                cb_categoria.ValueMember = "Id_Categoria";
-                cb_categoria.DisplayMember = "Nombre";
-            }
-
-
-        public void FiltrarCategoria()
-        {
-            CategoriaBusiness ctr = new CategoriaBusiness();
-            CategoriaModel model = new CategoriaModel();
-            model.Nombre = cb_categoria.Text;
-            cb_categoria.DataSource = ctr.BuscarCategoria(model);
-            cb_categoria.ValueMember = "Id_Categoria";
-            cb_categoria.DisplayMember = "Nombre";
-        }
+     
 
 
 
-        public void ListarMarca()
-        {
-
-            ClassResult cr = new ClassResult();
-            MarcaBusiness ctr = new MarcaBusiness();
-            cr = ctr.Marca_Cons();
-            DataTable data = cr.Dt1;
-            cb_marca.DataSource = data;
-            cb_marca.ValueMember = "Id_Mca";
-            cb_marca.DisplayMember = "Nombre";
-        }
-
-        public void FiltrarMarca()
-        {
-            MarcaBusiness ctr = new MarcaBusiness();
-            MarcaModel model = new MarcaModel();
-            model.Nombre = cb_marca.Text;
-            cb_marca.DataSource = ctr.BuscarMarca(model);
-            cb_marca.ValueMember = "Id_Mca";
-            cb_marca.DisplayMember = "Nombre";
-        }
 
 
-    
+
+
+
 
         private void Cb_categoria_TextChanged(object sender, EventArgs e)
         {
@@ -309,7 +293,6 @@ namespace OpenFarm.Mantenimiento
 
         private void Cb_categoria_KeyUp(object sender, KeyEventArgs e)
         {
-            FiltrarCategoria();
         }
 
 
@@ -320,18 +303,63 @@ namespace OpenFarm.Mantenimiento
 
         private void Cb_marca_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                FiltrarMarca();
-            }
+
         }
 
         private void Cb_categoria_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+
+        }
+
+        private void Cb_presentacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+        private void Btn_buscarMarca_Click(object sender, EventArgs e)
+        {
+            using (var form = new FrmDialogMarca())
             {
-                FiltrarCategoria();
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    txt_marca.Text = form.MarcaModel.Nombre;
+                    Id_Mca = form.MarcaModel.Id_Mca;
+                }
             }
+        }
+
+        private void Btn_buscarCategoria_Click(object sender, EventArgs e)
+        {
+            using (var form = new FrmDialogCategoria())
+            {
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    txt_categoria.Text = form.CategoriaModel.Nombre;
+                    Id_Categoria = form.CategoriaModel.Id_Categoria;
+                }
+            }
+        }
+
+        private void Btn_buscarPresentacion_Click(object sender, EventArgs e)
+        {
+
+            using (var form = new FrmDialogPresentacion())
+            {
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    txt_presentacion.Text = form.PresentacionModel.Nombre;
+                    Id_Presentacion = form.PresentacionModel.Id_Presentacion;
+                }
+            }
+
         }
     }
 }

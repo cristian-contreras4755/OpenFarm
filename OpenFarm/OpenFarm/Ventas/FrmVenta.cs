@@ -164,25 +164,25 @@ namespace OpenFarm.Ventas
             
 
 
-                int altura = 0;
+              //  int altura = 0;
 
                 //validacion de detalle si  el detalle tiene  es mayor a 21 caracteres por linea
                 for (int i = 0; i <= nroLinea; i++)
                 {
-                    altura = altura + 30;
+                   // altura = altura + 30;
                     if (!(lista.IndexOf(item)==0))
                     {
-                        Y = Y + 18;
+                        Y = Y + 19;
                      
                     } 
                 }
 
 
-                Rectangle rectDescripcionDet = new Rectangle(X, Y, 155, altura);
-                Rectangle rectCantidadDet = new Rectangle(X +150, Y, 70, altura);
-                Rectangle rectPrecioDet = new Rectangle(X+190, Y, 70, altura);
+                Rectangle rectDescripcionDet = new Rectangle(X, Y, 155, 160);
+                Rectangle rectCantidadDet = new Rectangle(X +150, Y, 70, 160);
+                Rectangle rectPrecioDet = new Rectangle(X+190, Y, 70, 160);
              //   Rectangle rectDesctoDet = new Rectangle(X+200, Y, 70, 30);
-                Rectangle rectTotalDet = new Rectangle(X+250, Y, 70, altura);
+                Rectangle rectTotalDet = new Rectangle(X+250, Y, 70, 160);
 
 
                 e.Graphics.DrawString(""+ nroLinea+"-" + lengProd + item.Producto, font, Brushes.Black, rectDescripcionDet, formato_isquierda);
@@ -197,42 +197,52 @@ namespace OpenFarm.Ventas
             e.Graphics.DrawString("-------------------------------------------------------------------------------------", font, Brushes.Black, X, Y);
             Y = Y + 15;
 
+
+
             //55
             double OP_grabada = 100.000;
-            Rectangle Rec_OpGrabada = new Rectangle(X+80, Y, 300, 30);
-            e.Graphics.DrawString(AjustarTotalesText ("OP. GRABADAS", OP_grabada) , font, Brushes.Black, Rec_OpGrabada, formato_isquierda);
+
+            
+            e.Graphics.DrawString("OP. GRABADAS", font, Brushes.Black, X+80, Y);
+            Rectangle Rec_OpGrabada = new Rectangle(X + 240, Y, 300, 30);
+            e.Graphics.DrawString(""+OP_grabada, font, Brushes.Black, Rec_OpGrabada, formato_isquierda);
             Y = Y + 15;
 
-            Rectangle Rec_OpGrattuita = new Rectangle(X + 80, Y, 300, 30);
-            e.Graphics.DrawString(AjustarTotalesText("OP. GRATUITAS", OP_grabada), font, Brushes.Black, Rec_OpGrattuita, formato_isquierda);
+            e.Graphics.DrawString("OP. GRATUITAS", font, Brushes.Black, X + 80, Y);
+            Rectangle Rec_OpGrattuita = new Rectangle(X + 240, Y, 300, 30);
+            e.Graphics.DrawString(""+ OP_grabada, font, Brushes.Black, Rec_OpGrattuita, formato_isquierda);
+            Y = Y + 15;
+
+            e.Graphics.DrawString("OP. EXONERADAS", font, Brushes.Black, X + 80, Y);
+            Rectangle Rec_OpExonorada = new Rectangle(X + 240, Y, 300, 30);
+            e.Graphics.DrawString(""+ OP_grabada, font, Brushes.Black, Rec_OpExonorada, formato_isquierda);
+            Y = Y + 15;
+
+            e.Graphics.DrawString("OP. INAFECTAS", font, Brushes.Black, X + 80, Y);
+            Rectangle Rec_OpInafecta = new Rectangle(X + 240, Y, 300, 30);
+            e.Graphics.DrawString(""+ OP_grabada, font, Brushes.Black, Rec_OpInafecta, formato_isquierda);
+            Y = Y + 15;
+
+            e.Graphics.DrawString("TOTAL DCTO", font, Brushes.Black, X + 80, Y);
+            Rectangle Rec_Dscto = new Rectangle(X + 240, Y, 300, 30);
+            e.Graphics.DrawString(""+ OP_grabada, font, Brushes.Black, Rec_Dscto, formato_isquierda);
             Y = Y + 15;
 
 
-            Rectangle Rec_OpExonorada = new Rectangle(X + 80, Y, 300, 30);
-            e.Graphics.DrawString(AjustarTotalesText("OP. EXONERADAS", OP_grabada), font, Brushes.Black, Rec_OpExonorada, formato_isquierda);
+            e.Graphics.DrawString("IGV", font, Brushes.Black, X + 80, Y);
+            Rectangle Rec_Igv = new Rectangle(X + 240, Y, 300, 30);
+            e.Graphics.DrawString(""+ OP_grabada, font, Brushes.Black, Rec_Igv, formato_isquierda);
             Y = Y + 15;
 
-            Rectangle Rec_OpInafecta = new Rectangle(X + 80, Y, 300, 30);
-            e.Graphics.DrawString(AjustarTotalesText("OP. INAFECTAS", OP_grabada), font, Brushes.Black, Rec_OpInafecta, formato_isquierda);
+            e.Graphics.DrawString("IMP BOLSA", font, Brushes.Black, X + 80, Y);
+            Rectangle Rec_ImpBolsa = new Rectangle(X + 240, Y, 300, 30);
+            e.Graphics.DrawString(""+ OP_grabada, font, Brushes.Black, Rec_ImpBolsa, formato_isquierda);
             Y = Y + 15;
 
-            Rectangle Rec_Dscto = new Rectangle(X + 80, Y, 300, 30);
-            e.Graphics.DrawString(AjustarTotalesText("TOTAL DCTO", OP_grabada), font, Brushes.Black, Rec_Dscto, formato_isquierda);
+            e.Graphics.DrawString("TOTAL A PAGAR", font, Brushes.Black, X + 80, Y);
+            Rectangle Rec_Total = new Rectangle(X + 240, Y, 300, 30);
+            e.Graphics.DrawString(""+ OP_grabada, font, Brushes.Black, Rec_Total, formato_isquierda);
             Y = Y + 15;
-
-
-            Rectangle Rec_Igv = new Rectangle(X + 80, Y, 300, 30);
-            e.Graphics.DrawString(AjustarTotalesText("IGV", OP_grabada), font, Brushes.Black, Rec_Igv, formato_isquierda);
-            Y = Y + 15;
-
-            Rectangle Rec_ImpBolsa = new Rectangle(X + 80, Y, 300, 30);
-            e.Graphics.DrawString(AjustarTotalesText("IMP BOLSA", OP_grabada), font, Brushes.Black, Rec_ImpBolsa, formato_isquierda);
-            Y = Y + 15;
-
-            Rectangle Rec_Total = new Rectangle(X + 80, Y, 300, 30);
-            e.Graphics.DrawString(AjustarTotalesText("TOTAL A PAGAR", OP_grabada), font, Brushes.Black, Rec_Total, formato_isquierda);
-            Y = Y + 15;
-
 
 
 
@@ -297,6 +307,7 @@ namespace OpenFarm.Ventas
         {
 
         }
+
 
 
         public string AjustarTotalesText(string Titulo, double Monto) {

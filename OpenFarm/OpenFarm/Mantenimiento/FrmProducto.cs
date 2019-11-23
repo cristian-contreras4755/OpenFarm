@@ -108,6 +108,8 @@ namespace OpenFarm.Mantenimiento
             productoModel.Cd_Prod = cd_prod;
             FrmProductoCrea fmr = new FrmProductoCrea(productoModel);
             fmr.ShowDialog();
+
+            Listar();
         }
 
         private void Btn_salir_Click(object sender, EventArgs e)
@@ -116,6 +118,11 @@ namespace OpenFarm.Mantenimiento
         }
 
         private void EliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Editar_Click(object sender, EventArgs e)
         {
 
         }

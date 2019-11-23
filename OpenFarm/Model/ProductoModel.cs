@@ -12,6 +12,8 @@ namespace Model
 
         public int Id_Categoria { get; set; }
 
+        public int Id_Presentacion { get; set; }
+
         public int Id_Mca { get; set; }
 
         public string Nombre1 { get; set; }

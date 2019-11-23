@@ -24,8 +24,9 @@ namespace Repository
                 {
                     var Parameters = new DynamicParameters();            
                     Parameters.Add("@Nombre1", ProductoModel.Nombre1, dbType: DbType.String, direction: ParameterDirection.Input, size: 100);
-                    Parameters.Add("@Nombre2", ProductoModel.Nombre2, dbType: DbType.String, direction: ParameterDirection.Input, size: 100);
+                    Parameters.Add("@Nombre2", ProductoModel.Nombre2, dbType: DbType.String, direction: ParameterDirection.Input, size: 100);               
                     Parameters.Add("@Id_Categoria", ProductoModel.Id_Categoria, dbType: DbType.Int32, direction: ParameterDirection.Input);
+                    Parameters.Add("@Id_Presentacion", ProductoModel.Id_Presentacion, dbType: DbType.Int32, direction: ParameterDirection.Input);
                     Parameters.Add("@Id_Mca", ProductoModel.Id_Mca, dbType: DbType.Int32, direction: ParameterDirection.Input);
                     Parameters.Add("@NCorto", ProductoModel.NCorto, dbType: DbType.String, direction: ParameterDirection.Input, size: 10);
                     Parameters.Add("@Descrip", ProductoModel.Descrip, dbType: DbType.String, direction: ParameterDirection.Input, size: 200);
@@ -108,6 +109,7 @@ namespace Repository
                 {
                     var Parameters = new DynamicParameters();
                     Parameters.Add("@Cd_Prod", ProductoModel.Cd_Prod, dbType: DbType.String, direction: ParameterDirection.Input, size: 7);
+                    Parameters.Add("@Id_Presentacion", ProductoModel.Id_Presentacion, dbType: DbType.Int32, direction: ParameterDirection.Input);
                     Parameters.Add("@Nombre1", ProductoModel.Nombre1, dbType: DbType.String, direction: ParameterDirection.Input, size: 100);
                     Parameters.Add("@Nombre2", ProductoModel.Nombre2, dbType: DbType.String, direction: ParameterDirection.Input, size: 100);
                     Parameters.Add("@Id_Categoria", ProductoModel.Id_Categoria, dbType: DbType.Int32, direction: ParameterDirection.Input);
