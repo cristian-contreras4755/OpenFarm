@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace OpenFarm
 {
-    public partial class Principal : MaterialSkin.Controls.MaterialForm
+    public partial class Principal : Form
     {
         private int childFormNumber = 0;
 
@@ -18,18 +18,18 @@ namespace OpenFarm
         {
             InitializeComponent();
 
-            var skinmanager = MaterialSkin.MaterialSkinManager.Instance;
-            skinmanager.AddFormToManage(this);
-            skinmanager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
-            skinmanager.ColorScheme = new MaterialSkin.ColorScheme(
-                   MaterialSkin.Primary.Amber600,
-                   MaterialSkin.Primary.Brown400,
-                MaterialSkin.Primary.Brown400,
-                 MaterialSkin.Accent.Blue200,
-                  MaterialSkin.TextShade.WHITE
+            //var skinmanager = MaterialSkin.MaterialSkinManager.Instance;
+            //skinmanager.AddFormToManage(this);
+            //skinmanager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            //skinmanager.ColorScheme = new MaterialSkin.ColorScheme(
+            //       MaterialSkin.Primary.Amber600,
+            //       MaterialSkin.Primary.Brown400,
+            //    MaterialSkin.Primary.Brown400,
+            //     MaterialSkin.Accent.Blue200,
+            //      MaterialSkin.TextShade.WHITE
 
 
-                );
+            //    );
         }
 
         private void ShowNewForm(object sender, EventArgs e)

@@ -58,5 +58,14 @@ namespace Bussines
             return _ventaRepository.FiltrarUsuario(usuarioModel);
         }
 
+
+        public ClassResult Usuario_Login(UsuarioModel usuarioModel)
+        {
+            UsuarioRepository _ventaRepository = new UsuarioRepository();
+            return _ventaRepository.Usuario_Login(usuarioModel);
+        }
+
+
+
     }
 }

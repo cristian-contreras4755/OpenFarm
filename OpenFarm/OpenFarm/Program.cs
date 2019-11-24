@@ -21,7 +21,7 @@ namespace OpenFarm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmUsuario());
+            Application.Run(new FrmLogin());
         }
     }
 }

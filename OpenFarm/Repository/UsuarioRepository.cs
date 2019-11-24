@@ -305,6 +305,76 @@ namespace Repository
             }
             return DtResultado;
         }
+        public ClassResult Usuario_Login(UsuarioModel usuarioModel)
+        {
+            ClassResult cr = new ClassResult();
+            Conexion _conexion = new Conexion();
+            try
+            {
+                DataTable DtResultado = new DataTable("login");
+                using (SqlConnection connection = new SqlConnection(_conexion.Getconnection()))
+                {
+                    connection.Open();
+
+                    SqlCommand SqlCmd = new SqlCommand();
+
+                    SqlParameter Par_Usuario = new SqlParameter();
+                    Par_Usuario.ParameterName = "@Usuario";
+                    Par_Usuario.SqlDbType = SqlDbType.VarChar;
+                    Par_Usuario.Value = usuarioModel.Usuario;
+                    SqlCmd.Parameters.Add(Par_Usuario);
+
+                    SqlParameter ParId_Password = new SqlParameter();
+                    ParId_Password.ParameterName = "@Password";
+                    ParId_Password.SqlDbType = SqlDbType.VarChar;
+                    ParId_Password.Value = usuarioModel.Password;
+                    SqlCmd.Parameters.Add(ParId_Password);
+
+
+                    SqlParameter Parmsg = new SqlParameter();
+                    Parmsg.ParameterName = "@msj";
+                    Parmsg.SqlDbType = SqlDbType.VarChar;
+                    Parmsg.Size = 100;
+                    Parmsg.Direction = ParameterDirection.Output;
+                    SqlCmd.Parameters.Add(Parmsg);
+
+
+
+                    SqlCmd.Connection = connection;
+                    SqlCmd.CommandText = "sp_seg_Login";
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+
+                    SqlCmd.ExecuteNonQuery();
+                    connection.Close();
+                    string PCmsj = SqlCmd.Parameters["@msj"].Value.ToString();
+
+
+                    if (String.IsNullOrEmpty(PCmsj))
+                    {
+                        SqlDat.Fill(DtResultado);
+                        cr.HuboError = false;
+                        cr.Dt1 = DtResultado;
+                        return cr;
+                    }
+                    else
+                    {
+                        cr.HuboError = true;
+                        cr.ErrorMsj = PCmsj;
+                        cr.LugarError = "Usuario_Login()";
+                        return cr;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                cr.HuboError = true;
+                cr.ErrorMsj = ex.Message;
+                cr.LugarError = "Usuario_Login()";
+                return cr;
+            }
+        }
+
 
     }
 }
